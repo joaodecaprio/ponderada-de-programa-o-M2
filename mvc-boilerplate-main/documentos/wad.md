@@ -47,7 +47,7 @@ Os models adicionados foram apenas 3, dentre eles temos o userModel, taskModel e
 
 ### 3.2. Arquitetura (Semana 5)
 <img src= "./Diagrama Projeto individual.png">
-
+<img src= "./Diagrama Projeto individual 2.png">
 ### 3.3. Wireframes (Semana 03 - opcional)
 
 *Posicione aqui as imagens do wireframe construído para sua solução e, opcionalmente, o link para acesso (mantenha o link sempre público para visualização).*
