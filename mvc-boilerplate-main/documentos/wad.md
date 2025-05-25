@@ -62,8 +62,7 @@ Os models adicionados foram apenas 3, dentre eles temos o userModel, taskModel e
 *Posicione aqui algumas imagens demonstrativas de seu protótipo de alta fidelidade e o link para acesso ao protótipo completo (mantenha o link sempre público para visualização).*
 
 ### 3.6. WebAPI e endpoints (Semana 05)
-
-*Utilize um link para outra página de documentação contendo a descrição completa de cada endpoint. Ou descreva aqui cada endpoint criado para seu sistema.*  
+https://docs.google.com/document/d/1zGQRGxdT-d3TMsHbfW2uo643_KeNjDzfnhlYqzm75hk/edit?tab=t.0
 
 ### 3.7 Interface e Navegação (Semana 07)
 
