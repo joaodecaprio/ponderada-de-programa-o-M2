@@ -1,0 +1,156 @@
+/* Fonte futurista */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Orbitron', sans-serif;
+  color: #a0c4ff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+  flex: 1;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(20, 40, 80, 0.8);
+  border-radius: 15px;
+  box-shadow:
+    0 0 10px #00bfff,
+    inset 0 0 20px #005f99;
+  backdrop-filter: blur(8px);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #00bfff;
+  text-shadow:
+    0 0 5px #00bfff,
+    0 0 10px #00bfff,
+    0 0 20px #00bfff;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Botões */
+button, .btn {
+  background: linear-gradient(135deg, #00bfff, #005f99);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  padding: 12px 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow:
+    0 0 10px #00bfff,
+    0 0 20px #00bfff;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(135deg, #005f99, #00bfff);
+  box-shadow:
+    0 0 20px #00e0ff,
+    0 0 30px #00e0ff;
+  transform: scale(1.05);
+}
+
+/* Inputs */
+input[type="text"], input[type="email"], select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #00bfff;
+  background: rgba(0, 191, 255, 0.1);
+  color: #a0c4ff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+  border-color: #00e0ff;
+  outline: none;
+  box-shadow: 0 0 8px #00e0ff;
+  background: rgba(0, 224, 255, 0.15);
+}
+
+/* Tabela estilizada */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 47, 94, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+th, td {
+  padding: 15px 20px;
+  text-align: left;
+  border-bottom: 1px solid #005f99;
+  color: #a0c4ff;
+}
+
+th {
+  background: linear-gradient(135deg, #00bfff, #005f99);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+tr:hover {
+  background: rgba(0, 224, 255, 0.2);
+  cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+  background: linear-gradient(135deg, #005f99, #00bfff);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  box-shadow: 0 -5px 15px #00bfff;
+  user-select: none;
+}
+
+/* Links */
+a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00e0ff;
+  text-shadow: 0 0 8px #00e0ff;
+}
+
+/* Scrollbar customizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f2027;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00bfff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e0ff;
+}
