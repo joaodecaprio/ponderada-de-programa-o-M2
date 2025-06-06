@@ -78,7 +78,7 @@ Os models adicionados foram apenas 3, dentre eles temos o userModel, taskModel e
 Na última versão do meu projeto quando você entrava nas rotas aparecia apenas um json, então nesta versão eu trabalhei no front end do trabalho. Dentro dele produzi 3 páginas no meu projeto, página inicial, página de usuários e por fim página de categorias. Tive que implementar um código html e modificar o css para fazer o design do front-end, além de ajustar as rotas para não ter nenhum problema. A tela de login você entra nela preenche um fórmulario com seus dados, depois é redirecionado para a tela de usários onde aparece uma tabela com o usuário que você criou, e uns outros exemplos para preencher a tabela, após isto você retorna a pagina inical e entra no botão "categorias" que te direciona para a página das categorias onde você vê uma lista de categorias para sua tarefa e depois pode até preencher o forms com o nome da sua tarefa e em qual categoria ela se encaixa. Além disso tem a tabela das suas tarefas onde você pode criar uma tarefa e armazenala pra ver mais tarde.
  # Página inicial <img src= "./pagina.inicial.png">
 # Página de usuários <img src= "./user.page.png">
-# Página de Tarefas  <img src= "./task.page.png">
+# Página de Tarefas  <img src= "./mvc-boilerplate-main/assets/task.page">
 # Página de categorias  <img src= "./category.pageofi.png">
 ## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
 
