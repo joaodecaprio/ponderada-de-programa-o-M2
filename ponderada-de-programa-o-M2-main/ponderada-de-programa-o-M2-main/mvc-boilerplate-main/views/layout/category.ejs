@@ -5,23 +5,64 @@
     background: #18182f !important;
     color: #fff !important;
   }
-  .form-container,
-  table,
-  .form-container input,
-  .form-container label,
-  .form-container button,
-  .form-container select {
-    background: #23234b !important;
-    color: #fff !important;
-    border-color: #7f5cff !important;
+  .modal-bg {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(24,24,47,0.93);
+    justify-content: center;
+    align-items: center;
   }
-  table,
-  th,
-  td {
-    border: none !important;
+  .modal-bg.active { display: flex; }
+  .modal-content {
+    background: #23234b;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px #7f5cff33;
+    padding: 32px 24px;
+    min-width: 320px;
+    max-width: 400px;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
   }
-  th, td {
-    color: #fff !important;
+  .modal-content label { color: #fff; }
+  .modal-content input, .modal-content textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #7f5cff;
+    background: #18182f;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .modal-content button[type="submit"] {
+    background: linear-gradient(90deg,#7f5cff,#43e97b);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #7f5cff44;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+  .close-modal {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    position: absolute;
+    top: 18px;
+    right: 32px;
+    cursor: pointer;
   }
 </style>
 
@@ -40,7 +81,7 @@
     <p class="subtitle">Gerencie suas categorias de forma divertida!</p>
   </div>
 
-  <!-- Apenas a tabela de categorias -->
+  <!-- Tabela de categorias -->
   <div style="display: flex; gap: 36px; justify-content: center; align-items: flex-start; flex-wrap: wrap; margin-top: -70px;">
     <div style="max-width: 420px; flex: 1 1 340px; margin-top: 0;">
       <h2 style="text-align:center; margin-bottom: 8px;">Categorias</h2>
@@ -61,13 +102,43 @@
           <% }) %>
         </tbody>
       </table>
+      <!-- Botão para abrir o modal, agora abaixo da tabela -->
+      <div style="display: flex; justify-content: center; margin: 32px 0 0 0;">
+        <button id="openModalBtn" style="background: linear-gradient(90deg,#7f5cff,#43e97b); color: #fff; border: none; border-radius: 16px; padding: 12px 32px; font-size: 1.1em; font-weight: 600; cursor: pointer; box-shadow: 0 4px 18px #7f5cff33;">
+          Criar Categoria
+        </button>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- Modal de criação de categoria -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal-content">
+    <button class="close-modal" id="closeModalBtn" title="Fechar">&times;</button>
+    <h2 style="text-align:center; color:#7f5cff; margin-bottom: 10px;">Nova Categoria</h2>
+    <form action="/category" method="POST">
+      <label for="name">Nome da Categoria:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="description">Descrição:</label>
+      <textarea id="description" name="description" required rows="3"></textarea>
+      <button type="submit">Criar Categoria</button>
+    </form>
+  </div>
+</div>
 
+<script>
+  // Modal open/close logic
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const modalBg = document.getElementById('modalBg');
 
-
+  openModalBtn.onclick = () => modalBg.classList.add('active');
+  closeModalBtn.onclick = () => modalBg.classList.remove('active');
+  window.onclick = (e) => {
+    if (e.target === modalBg) modalBg.classList.remove('active');
+  };
+</script>
 
 
 
