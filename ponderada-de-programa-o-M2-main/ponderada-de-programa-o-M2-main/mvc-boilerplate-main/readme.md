@@ -1,6 +1,6 @@
 # Task Maker
 
-Este é um projeto com o propósito de gerenciar as tarefas do usuário, além de catalogar as tarefas sendo elas pessoais, saúde, lazer, trabalho etc. O Task maker visa ajudar na organização do usuário, auxiliando-o na organização das tarefas do cotidiano. Nesta aplicação web você primeiro cria seu usuário e é redirecionado para a tela de usuários com uma lista dos já cadastrados, depois você vai para a tela de tarefas e cria uma tarefa colocando ela na categoria mais adequada, caso você queria ver as categorias com mais clareza pode visitar a página das categorias onde haverá uma lista com todas as catgegorias disponiveis.
+Este é um projeto com o propósito de gerenciar as tarefas do usuário, além de catalogar as tarefas sendo elas pessoais, saúde, lazer, trabalho etc. O Task maker visa ajudar na organização do usuário, auxiliando-o na organização das tarefas do cotidiano. Nesta aplicação web você primeiro cria seu usuário e é redirecionado para a tela de usuários com uma lista dos já cadastrados, depois você vai para a tela de tarefas e cria uma tarefa colocando ela na categoria mais adequada, caso você queria ver as categorias com mais clareza pode visitar a página das categorias onde haverá uma lista com todas as categorias disponiveis.
 
 ## Requisitos
 
