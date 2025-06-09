@@ -90,7 +90,7 @@ Na última versão do meu projeto, ao acessar as rotas, era exibido apenas um JS
 # Página das usuários:  
 
 
-<img src= "./localhost.user.png">
+<img src= "./localhost.user1.png">
 
 # Página inicial :  
 
