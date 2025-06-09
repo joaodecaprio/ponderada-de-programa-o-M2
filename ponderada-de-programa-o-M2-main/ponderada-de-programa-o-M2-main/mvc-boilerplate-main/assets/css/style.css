@@ -1,0 +1,104 @@
+/* Cabeçalho gamificado */
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.page-header h1 {
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-size: 2.6rem;
+  color: #7f5cff;
+  letter-spacing: 2px;
+  margin-bottom: 0.2em;
+  text-shadow: 0 2px 8px #23234b55;
+}
+.page-header .subtitle {
+  color: #43e97b;
+  font-size: 1.2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
+
+/* Imagens gamificadas */
+.task-characters {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 56px;              /* Mais espaço entre as imagens */
+  margin: 48px 0 48px 0;  /* Mais espaço acima e abaixo */
+}
+.char-img {
+  width: 340px;
+  height: 210px;
+  object-fit: contain;
+  border-radius: 100px;   /* Bem oval/pílula */
+  border: 7px solid #7f5cff;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.22);
+  background: #1a1a2e;
+  transition: transform 0.18s, border 0.18s, box-shadow 0.18s;
+  outline: 4px solid #fff;
+}
+.char-img-1 { border-color: #7f5cff; }
+.char-img-2 { border-color: #ffb347; }
+.char-img-3 { border-color: #43e97b; }
+.char-img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  border-color: #fff;
+  box-shadow: 0 16px 48px #43e97b88, 0 0 0 10px #7f5cff44;
+  outline: 4px solid #43e97b;
+}
+
+/* Tabela gamificada */
+.styled-table {
+  width: 100%;
+  background: #18182f;
+  color: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px #7f5cff44;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 40px;
+}
+.styled-table th, .styled-table td {
+  padding: 18px 28px;
+  border-bottom: 2px solid #43e97b;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+}
+.styled-table th {
+  background: linear-gradient(90deg, #7f5cff 0%, #43e97b 100%);
+  color: #fff;
+  text-shadow: 1px 1px 2px #23234b;
+  border-bottom: 4px solid #ffb347;
+}
+.styled-table tr:nth-child(even) {
+  background: #23234b;
+}
+.styled-table tr:hover {
+  background: #2d2d5a;
+  transition: background 0.2s;
+}
+
+/* Botão gamificado */
+.form-container button[type="submit"] {
+  background: linear-gradient(90deg, #ffb347 0%, #7f5cff 100%);
+  color: #fff;
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.18rem;
+  border: none;
+  border-radius: 16px;
+  padding: 14px 36px;
+  box-shadow: 0 6px 24px #43e97b55;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin-top: 18px;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+}
+.form-container button[type="submit"]:hover {
+  transform: scale(1.10) rotate(-2deg);
+  background: linear-gradient(90deg, #43e97b 0%, #7f5cff 100%);
+  box-shadow: 0 12px 40px #7f5cff55;
+}

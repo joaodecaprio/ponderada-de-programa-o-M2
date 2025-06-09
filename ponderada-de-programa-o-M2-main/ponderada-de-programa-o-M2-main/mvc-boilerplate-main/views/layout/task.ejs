@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= pageTitle %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    body, html {
+      background: #18182f !important;
+      color: #fff !important;
+      min-height: 100vh;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="margin-top: 0; background: #18182f; color: #fff; min-height: 100vh;">
+    <div class="page-header">
+      <h1><%= pageTitle %></h1>
+      <p class="subtitle">Gerencie suas tarefas de forma divertida!</p>
+    </div>
+
+    <!-- Imagens dos personagens centralizadas acima -->
+    <div class="task-characters" style="justify-content: center; margin-bottom: 32px;">
+      <img src="/narceja.boca.jpg" alt="Narceja Boca" class="char-img char-img-1" />
+      <img src="/kevin.jpg" alt="Kevin" class="char-img char-img-2" />
+      <img src="/joao.frango.jpg" alt="João Frango" class="char-img char-img-3" />
+    </div>
+
+    <!-- Flex container para tabela e formulário lado a lado -->
+    <div style="display: flex; gap: 40px; justify-content: center; align-items: flex-start;">
+      <!-- Tabela menor e à direita -->
+      <div style="flex: 0 0 420px;">
+        <h2 style="text-align:center; margin-bottom: 10px;">Lista de Tarefas</h2>
+        <table class="styled-table" style="width: 100%; font-size: 0.98em;">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Descrição</th>
+              <th>Categoria</th>
+              <th>Usuário</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% tasks.forEach(task => { %>
+              <tr>
+                <td><%= task.id %></td>
+                <td><%= task.title || task.taskName %></td>
+                <td><%= task.description || '' %></td>
+                <td><%= task.category_name %></td>
+                <td><%= task.user_id %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Card de Nova Tarefa menor e campos compactos -->
+      <div class="form-container" style="max-width: 380px; background: #23234b; border-radius: 22px; box-shadow: 0 8px 32px #7f5cff33; padding: 28px 18px;">
+        <h2 style="text-align:center; color:#7f5cff; margin-bottom: 14px;">Nova Tarefa</h2>
+        <form action="/task" method="POST" style="display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <label for="taskName" style="color:#fff; font-weight:500; font-size:0.98em;">Título da Tarefa:</label>
+            <input type="text" id="taskName" name="taskName" required
+              style="width:100%; padding:7px 10px; border-radius:8px; border:1px solid #7f5cff; background:#18182f; color:#fff; margin-top:3px; font-size:0.98em;">
+          </div>
+          <div>
+            <label for="description" style="color:#fff; font-weight:500; font-size:0.98em;">Descrição:</label>
+            <input type="text" id="description" name="description" required
+              style="width:100%; padding:7px 10px; border-radius:8px; border:1px solid #7f5cff; background:#18182f; color:#fff; margin-top:3px; font-size:0.98em;">
+          </div>
+          <div>
+            <label for="categoryId" style="color:#fff; font-weight:500; font-size:0.98em;">Categoria:</label>
+            <select id="categoryId" name="categoryId" required
+              style="width:100%; padding:7px 10px; border-radius:8px; border:1px solid #7f5cff; background:#18182f; color:#fff; margin-top:3px; font-size:0.98em;">
+              <option value="">Selecione uma categoria</option>
+              <% categories.forEach(function(category) { %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+              <% }) %>
+            </select>
+          </div>
+          <input type="hidden" name="userId" value="1">
+          <button type="submit"
+            style="margin-top:10px; padding:8px 0; border-radius:10px; border:none; background:linear-gradient(90deg,#7f5cff,#43e97b); color:#fff; font-size:1em; font-weight:500; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #7f5cff44; transition:background 0.2s;">
+            Criar Tarefa
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
