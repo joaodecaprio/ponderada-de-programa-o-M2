@@ -76,7 +76,13 @@ Os models adicionados foram apenas 3, dentre eles temos o userModel, taskModel e
 ### 3.7 Interface e Navegação (Semana 07)
 Na última versão do meu projeto quando você entrava nas rotas aparecia apenas um json, então nesta versão eu trabalhei no front end do trabalho. Dentro dele produzi 3 páginas no meu projeto, página inicial, página de usuários e por fim página de categorias. Tive que implementar um código html e modificar o css para fazer o design do front-end, além de ajustar as rotas para não ter nenhum problema. A tela de login você entra nela preenche um fórmulario com seus dados, depois é redirecionado para a tela de usários onde aparece uma tabela com o usuário que você criou, e uns outros exemplos para preencher a tabela, após isto você retorna a pagina inical e entra no botão "categorias" que te direciona para a página das categorias onde você vê uma lista de categorias para sua tarefa e depois pode até preencher o forms com o nome da sua tarefa e em qual categoria ela se encaixa. Além disso tem a tabela das suas tarefas onde você pode criar uma tarefa para não se esquecer de cumpri-la futuramente. Para você entrar em cada página do site basta navegar pelos botões do cabeçalho que tem as quatro rotas do site. 
 
-<img src= "./ponderada-de-programa-o-M2-main/ponderada-de-programa-o-M2-main/mvc-boilerplate-main/assets/localhost.categoryofc.png">
+<img src= "./localhost.categoryofc.png">
+
+<img src= "./localhost.task.png">
+
+<img src= "./localhost.user.png">
+
+<img src= "./localhost.pageinicial.png">
 
 ## <a name="c4"></a>4. Desenvolvimento da Aplicação Web (Semana 8)
 
