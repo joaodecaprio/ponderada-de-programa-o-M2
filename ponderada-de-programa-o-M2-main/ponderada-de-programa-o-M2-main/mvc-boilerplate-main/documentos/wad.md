@@ -85,7 +85,7 @@ Na última versão do meu projeto, ao acessar as rotas, era exibido apenas um JS
 # Página das tarefas:  
 
 
-<img src= "./localhost.task.png">
+<img src= "./localhost.task1.png">
 
 # Página das usuários:  
 
