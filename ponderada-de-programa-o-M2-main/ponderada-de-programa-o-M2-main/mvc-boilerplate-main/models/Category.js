@@ -3,7 +3,7 @@ const db = require('../config/db');
 
 class Category {
   static async getAll() {
-    const result = await db.query('SELECT * FROM category');
+    const result = await db.query('SELECT id, name, description FROM category');
     return result.rows;
   }
 
@@ -31,6 +31,14 @@ class Category {
   static async delete(id) {
     const result = await db.query('DELETE FROM category WHERE id = $1 RETURNING *', [id]);
     return result.rowCount > 0;
+  }
+
+  static async updateDescriptions() {
+    await db.query("UPDATE category SET description = 'Tarefas relacionadas ao trabalho' WHERE name = 'Trabalho'");
+    await db.query("UPDATE category SET description = 'Atividades de estudo e aprendizado' WHERE name = 'Estudos'");
+    await db.query("UPDATE category SET description = 'Compromissos pessoais' WHERE name = 'Pessoal'");
+    await db.query("UPDATE category SET description = 'Cuidados com a saúde' WHERE name = 'Saúde'");
+    await db.query("UPDATE category SET description = 'Práticas esportivas e exercícios' WHERE name = 'Esportes'");
   }
 }
 
